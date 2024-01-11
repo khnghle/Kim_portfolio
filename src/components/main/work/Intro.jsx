@@ -9,7 +9,7 @@ const styles = (theme) => ({
 	padding: "40px",
 
 	".title-container": {
-		width: "140px",
+		width: "160px",
 	},
 
 	".profile-picture": {

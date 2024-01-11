@@ -4,12 +4,12 @@ import healthcareManagement from "../../../assets/healthcareManagementMain.svg";
 import monkeyBuddy from "../../../assets/monkeyBuddyMain.svg";
 
 const styles = () => ({
-	display: 'flex',
-	flexDirection: 'column',
-	alignItems: 'center',
-	gap: '20px',
-	marginTop: '40px',
-	marginBottom: '80px',
+	display: "flex",
+	flexDirection: "column",
+	alignItems: "center",
+	gap: "20px",
+	marginTop: "40px",
+	marginBottom: "80px",
 	".card--container": {
 		display: "flex",
 		justifyContent: "center",
@@ -22,10 +22,9 @@ const styles = () => ({
 		marginTop: "10px",
 		width: "80px",
 	},
-	".card--text-container" : {
-		marginLeft: '8px'
-
-	}
+	".card--text-container": {
+		marginLeft: "10px",
+	},
 });
 
 function Projects() {
@@ -33,7 +32,7 @@ function Projects() {
 
 	const dataSource = [
 		{
-			header: ["Bee.You", "Therapy App"],
+			header: "Bee.You Therapy",
 			description: "The only tool you need to track your mental health",
 			image: beeYou,
 			imageDescription: "Bee.You Screens",
