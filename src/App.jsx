@@ -1,11 +1,15 @@
-import { Box } from "@mui/material";
-import Work from "./components/main/work";
+import Router from "./AppRouter";
+import Header from "./components/common/NavBar";
+import Footer from "./components/common/Footer";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
 	return (
-		<Box>
-			<Work />
-		</Box>
+		<BrowserRouter>
+			<Header />
+			<Router />
+			<Footer />
+		</BrowserRouter>
 	);
 }
 

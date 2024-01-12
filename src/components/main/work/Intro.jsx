@@ -6,7 +6,7 @@ const styles = (theme) => ({
 	justifyContent: "space-around",
 	alignItems: "center",
 	backgroundColor: theme.palette.pink.light,
-	padding: "40px",
+	paddingBottom: "40px",
 
 	".title-container": {
 		width: "160px",
