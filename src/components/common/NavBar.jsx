@@ -15,9 +15,13 @@ const styles = ({ theme, location }) => ({
 	},
 	".navLink--item": {
 		padding: "0px 10px",
+		fontWeight: 'bold',
 		"&:hover": {
 			backgroundColor: theme.palette.green.light,
 			borderRadius: "10px",
+		},
+		".navLink--text": {
+			fontWeight: "inherit",
 		},
 	},
 });
@@ -40,14 +44,16 @@ function NavBar() {
 						key={`navLink-${idx}`}
 						to={link.route}
 						className={"navLink--item"}
-						style={({ isActive, }) => {
+						style={({ isActive }) => {
 							return {
 								fontWeight: isActive ? "bold" : "",
 								color: isActive ? theme.palette.green.dark : "inherit",
 							};
 						}}
 					>
-						<Typography variant="link1">{link.text}</Typography>
+						<Typography variant="link1" className={"navLink--text"}>
+							{link.text}
+						</Typography>
 					</NavLink>
 				))}
 			</Box>

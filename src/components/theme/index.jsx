@@ -8,7 +8,7 @@ const colors = {
 	green: {
 		main: "#C7CFC6",
 		light: "#C2DBAD94",
-		dark: "#6C9A48",
+		dark: "#477523",
 	},
 	blue: {
 		main: "#D9F0FF",
