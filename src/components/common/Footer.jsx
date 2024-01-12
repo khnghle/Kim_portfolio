@@ -19,7 +19,7 @@ const styles = ({ theme }) => ({
 function Footer() {
 	const theme = useTheme();
 	const linkData = [
-		{ text: "LinkedIn", route: "https://www.google.com", isOutsideApp: true },
+		{ text: "LinkedIn", route: "https://www.linkedin.com/in/kimberly-de-santiago-8353aa225/", isOutsideApp: true },
 	];
 	return (
 		<Box sx={styles({ theme })}>
