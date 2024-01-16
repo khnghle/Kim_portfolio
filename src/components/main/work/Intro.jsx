@@ -1,5 +1,5 @@
 import { useTheme, Typography, Box } from "@mui/material";
-import profile from "../../../assets/profile.svg";
+import profile from "../../../assets/work/profile.svg";
 
 const styles = (theme) => ({
 	display: "flex",

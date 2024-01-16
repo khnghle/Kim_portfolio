@@ -1,7 +1,6 @@
 import { useTheme, Typography, Box, Card } from "@mui/material";
-import beeYou from "../../../assets/beeYouMain.svg";
-import healthcareManagement from "../../../assets/healthcareManagementMain.svg";
-import monkeyBuddy from "../../../assets/monkeyBuddyMain.svg";
+import { useNavigate } from "react-router-dom";
+import {projectData} from '../../../data/projects' 
 
 const styles = () => ({
 	display: "flex",
@@ -29,30 +28,14 @@ const styles = () => ({
 
 function Projects() {
 	const theme = useTheme();
+	const navigate = useNavigate();
 
-	const dataSource = [
-		{
-			header: "Bee.You Therapy",
-			description: "The only tool you need to track your mental health",
-			image: beeYou,
-			imageDescription: "Bee.You Screens",
-			backgroundColor: theme.palette.green.main,
-		},
-		{
-			header: "Healthcare Management",
-			description: "Bridging the gap in Healthcare",
-			image: healthcareManagement,
-			imageDescription: "Healthcare Management Screens",
-			backgroundColor: theme.palette.blue.main,
-		},
-		{
-			header: "Monkey Buddy",
-			description: "Track your subscriptions in one place",
-			image: monkeyBuddy,
-			imageDescription: "Monkey Buddy Screens",
-			backgroundColor: theme.palette.orange.main,
-		},
-	];
+	const dataSource = projectData
+
+	const handleNavigate = (link) => {
+		navigate(`projects/${link}`);
+	};
+
 	return (
 		<Box sx={styles(theme)}>
 			{dataSource.map((data, dataIdx) => (
@@ -60,6 +43,7 @@ function Projects() {
 					style={{ backgroundColor: data.backgroundColor }}
 					className="card--container"
 					key={`card#${dataIdx}`}
+					onClick={() => handleNavigate(data.link)}
 				>
 					<Box className="card--text-container">
 						{typeof data.header === "string" ? (
