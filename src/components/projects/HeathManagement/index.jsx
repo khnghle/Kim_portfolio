@@ -2,18 +2,23 @@ import { Box, useTheme, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import ProjectIntro from "../common/Intro";
 import HCMSvg from "../../../assets/projects/HCM/app.svg";
+import MyRole from "../common/MyRole";
+
+import responsiblitliesTableSVG from "../../../assets/projects/HCM/responsibilies.svg";
+import designProcessFlowSVG from "../../../assets/projects/HCM/designProcess.svg";
 
 const styles = ({ theme }) => ({
 	display: "flex",
-	marginTop: "30px",
-	justifyContent: "center",
+	flexDirection: 'column',
+	marginTop: '30px',
+	alignItems: 'center'
 });
 
 function HealthManagement() {
 	const theme = useTheme();
 
-	const data = {
-		title: "healthManagement",
+	const introData = {
+		title: "HealthManagement",
 		textColor: "#0F3FAB",
 		phoneImage: HCMSvg,
 		backgroundText:
@@ -36,9 +41,19 @@ function HealthManagement() {
 		},
 	};
 
+	const myRoleData = {
+		myRole: "I was part of a UX/UI team for five weeks and was responsible for the following:",
+		roleTable: responsiblitliesTableSVG,
+		roleTableType: 'typeB',
+		productType: "Mobile design",
+		tools: "Figma",
+		designProcessFlow: designProcessFlowSVG,
+	};
+
 	return (
 		<Box sx={styles({ theme })}>
-			<ProjectIntro data={data} />
+			<ProjectIntro data={introData} />
+			<MyRole data={myRoleData} />
 		</Box>
 	);
 }

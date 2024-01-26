@@ -2,18 +2,23 @@ import { Box, useTheme, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import ProjectIntro from "../common/Intro";
 import BeeYouAppSvg from "../../../assets/projects/MonkeyBuddy/app.svg";
+import MyRole from "../common/MyRole";
+
+import responsiblitliesTableSVG from "../../../assets/projects/MonkeyBuddy/responsibilies.svg";
+import designProcessFlowSVG from "../../../assets/projects/MonkeyBuddy/designProcess.svg";
 
 const styles = ({ theme }) => ({
 	display: "flex",
-	marginTop: "30px",
-	justifyContent: "center",
+	flexDirection: 'column',
+	marginTop: '30px',
+	alignItems: 'center'
 });
 
 function MonkeyBuddy() {
 	const theme = useTheme();
 
-	const data = {
-		title: "BeeYou",
+	const introData = {
+		title: "MonkeyBuddy",
 		textColor: "#B17260",
 		phoneImage: BeeYouAppSvg,
 		backgroundText:
@@ -32,9 +37,20 @@ function MonkeyBuddy() {
 		},
 	};
 
+	const myRoleData = {
+    myRole: 'I was the solo UX/UI designer and was responsible for the following: ',
+    roleTable: responsiblitliesTableSVG,
+		roleTableType: 'typeB',
+    productType: 'Mobile design',
+    tools: 'Figma',
+    designProcessFlow: designProcessFlowSVG
+  };
+
 	return (
 		<Box sx={styles({ theme })}>
-			<ProjectIntro data={data} />
+			<ProjectIntro data={introData} />
+			<MyRole data={myRoleData} />
+
 		</Box>
 	);
 }

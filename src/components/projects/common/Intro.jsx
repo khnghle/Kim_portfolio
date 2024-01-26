@@ -1,11 +1,15 @@
 import { Box, useTheme, Typography } from "@mui/material";
-// import BeeYouApp from "../../../assets/projects/BeeYou/app.svg";
-import BeeYouAppSvg from "../../../assets/projects/BeeYou/app.svg";
+import {
+	generateOrderedNumLists,
+	generateUnorderedNumLists,
+	generateCustomText,
+} from "../../utils";
 
 const styles = ({ theme, textColor }) => ({
 	display: "flex",
 	marginTop: "20px",
 	lineHeight: "2",
+	width: "600px",
 	".text--container": {
 		width: "70%",
 		display: "flex",
@@ -16,10 +20,10 @@ const styles = ({ theme, textColor }) => ({
 	".background--container": {
 		width: "340px",
 	},
-  ".problem--container": {
+	".problem--container": {
 		width: "340px",
 	},
-  ".solution--container": {
+	".solution--container": {
 		width: "340px",
 	},
 	".header": {
@@ -30,61 +34,10 @@ const styles = ({ theme, textColor }) => ({
 		width: "160px",
 		marginLeft: "10px",
 	},
-
-	ol: {
-		padding: "0px",
-		"list-style-position": "inside",
-	},
-  ul: {
-		padding: "0px",
-		"list-style-position": "inside",
-	},
-	li: {
-		fontSize: "9px",
-		fontStyle: "normal",
-		fontWeight: "normal",
-	},
 });
 
 function ProjectIntro({ data }) {
 	const theme = useTheme();
-
-	const generateOrderedNumLists = (list, identifier) => (
-		<ol>
-			{list.map((listItem, idx) => (
-				<li key={`${identifier}-li${idx}`}>{listItem}</li>
-			))}
-		</ol>
-	);
-
-  const generateUnorderedNumLists = (list, identifier) => (
-		<ul>
-			{list.map((listItem, idx) => (
-				<li key={`${identifier}-li${idx}`}>{listItem}</li>
-			))}
-		</ul>
-	);
-
-	const generateCustomText = (list, identifier) => {
-		return (
-			<div>
-				{list.map((listItem, idx) => {
-					if (listItem.type === "string")
-						return (
-							<Typography key={`${identifier}-string${idx}`}>
-								{listItem.text}{" "}
-							</Typography>
-						);
-					if (listItem.type === "ol")
-						return (
-							<div key={`${identifier}-ol${idx}`}>
-								{generateOrderedNumLists(listItem.text, identifier)}
-							</div>
-						);
-				})}
-			</div>
-		);
-	};
 
 	return (
 		<Box sx={styles({ theme, textColor: data.textColor })}>
@@ -93,7 +46,11 @@ function ProjectIntro({ data }) {
 					<Typography variant="h2" className="header">
 						Background
 					</Typography>
-					<Typography>{data.backgroundText}</Typography>
+					<Typography>
+						{typeof data.backgroundText === "function"
+							? data.backgroundText()
+							: data.backgroundText}
+					</Typography>
 				</Box>
 				<Box className="problem--container">
 					<Typography variant="h2" className="header">
@@ -107,7 +64,7 @@ function ProjectIntro({ data }) {
 				</Box>
 				<Box className="solution--container">
 					<Typography variant="h2" className="header">
-						Potential Solutions{" "}
+						Potential Solutions
 					</Typography>
 					{data.solutionText.type === "custom" &&
 						generateCustomText(data.solutionText.text, "solution-list")}

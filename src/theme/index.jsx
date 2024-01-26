@@ -9,6 +9,7 @@ const colors = {
 		main: "#C7CFC6",
 		light: "#C2DBAD94",
 		dark: "#477523",
+		header: '#657362'
 	},
 	blue: {
 		main: "#D9F0FF",
@@ -31,6 +32,19 @@ export const inputGlobalStyles = (
 			a: {
 				textDecoration: "none",
 				color: "inherit",
+			},
+			li: {
+				fontSize: "9px",
+				fontStyle: "normal",
+				fontWeight: "normal",
+			},
+			ol: {
+				padding: "0px",
+				listStylePosition: "inside",
+			},
+			ul: {
+				padding: "0px",
+				listStylePosition: "inside",
 			},
 		}}
 	/>
@@ -75,6 +89,10 @@ theme.typography.h2 = {
 	fontSize: "14px",
 	fontStyle: "normal",
 	fontWeight: "600",
+
+	".green": {
+		color: "red",
+	},
 };
 
 theme.typography.body1 = {
