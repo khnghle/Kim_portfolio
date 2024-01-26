@@ -9,7 +9,7 @@ const colors = {
 		main: "#C7CFC6",
 		light: "#C2DBAD94",
 		dark: "#477523",
-		header: '#657362'
+		header: "#657362",
 	},
 	blue: {
 		main: "#D9F0FF",
@@ -45,6 +45,29 @@ export const inputGlobalStyles = (
 			ul: {
 				padding: "0px",
 				listStylePosition: "inside",
+			},
+			".map--img": {
+				width: "500px",
+			},
+			".lgMarginBtm": {
+				marginBottom: "20px",
+			},
+			".mdMarginBtm": {
+				marginBottom: "15px",
+			},
+			".smMarginBtm": {
+				marginBottom: "10px",
+			},
+			".xsmMarginBtm": {
+				marginBottom: "5px",
+			},
+			".strong": {
+				fontWeight: "bold",
+			},
+			".centerImage": {
+				display: "block",
+				marginLeft: "auto",
+				marginRight: "auto",
 			},
 		}}
 	/>

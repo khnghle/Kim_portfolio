@@ -2,6 +2,10 @@ import { Box, useTheme, Typography } from "@mui/material";
 import { generateUnorderedNumLists } from "../../utils";
 import competitiveAnalysisChart from "../../../assets/projects/BeeYou/competitiveAnalysisChart.svg";
 import empathyMapTable from "../../../assets/projects/BeeYou/empathyMap.svg";
+import siteMapTable from "../../../assets/projects/BeeYou/siteMap.svg";
+import userFlowTable from "../../../assets/projects/BeeYou/userFlow.svg";
+
+
 
 const styles = ({ theme }) => ({
 	display: "flex",
@@ -10,32 +14,7 @@ const styles = ({ theme }) => ({
 	marginLeft: "30px",
 	width: "600px",
 	lineHeight: 2,
-	".competitve-analysis-chart--img": {
-		width: "500px",
-	},
-	".empathy-map--img": {
-		width: "500px",
-	},
-	".lgMarginBtm": {
-		marginBottom: "20px",
-	},
-	".mdMarginBtm": {
-		marginBottom: "15px",
-	},
-	".smMarginBtm": {
-		marginBottom: "10px",
-	},
-	".xsmMarginBtm": {
-		marginBottom: "5px",
-	},
-	".strong": {
-		fontWeight: "bold",
-	},
-	".centerImage" : {
-		display: 'block',
-		marginLeft: 'auto',
-		marginRight: 'auto',
-	}
+
 });
 
 function BeeYouDiscover() {
@@ -64,6 +43,10 @@ function BeeYouDiscover() {
 		"She does not have a regular 9-5, therefore scheduling might be difficult. Her commute also ties in to any scheduling difficulties since time is of the essence  ",
 		"Main Point: Availability ",
 	];
+
+	const siteMap = "I wanted to focus on the user main health goals and leave room for future expansion."
+
+	const userFlows = () => <><strong>User Flow: </strong>Launch the app and see if you are able to book an appointment with your therapist. </>
 	return (
 		<Box sx={styles({ theme })}>
 			<Typography variant="h1" className="discover--header mdMarginBtm">
@@ -94,7 +77,7 @@ function BeeYouDiscover() {
 				</Typography>
 				<img
 					src={competitiveAnalysisChart}
-					className="competitve-analysis-chart--img centerImage"
+					className="map--img centerImage"
 				/>
 			</Box>
 
@@ -111,7 +94,33 @@ function BeeYouDiscover() {
 					{empathyMapText[1]}
 				</Typography>
 
-				<img src={empathyMapTable} className="empathy-map--img centerImage" />
+				<img src={empathyMapTable} className="map--img centerImage" />
+			</Box>
+
+			<Box className="section--container lgMarginBtm">
+				<Typography
+					variant="h2"
+					color="green.header"
+					className="section--header xsmMarginBtm"
+				>
+					Site Map
+				</Typography>
+				<Typography className="mdMarginBtm">{siteMap}</Typography>
+
+				<img src={siteMapTable} className="map--img centerImage" />
+			</Box>
+
+			<Box className="section--container lgMarginBtm">
+				<Typography
+					variant="h2"
+					color="green.header"
+					className="section--header xsmMarginBtm"
+				>
+					User Flows
+				</Typography>
+				<Typography className="mdMarginBtm">{userFlows()}</Typography>
+
+				<img src={userFlowTable} className="map--img centerImage" />
 			</Box>
 		</Box>
 	);
