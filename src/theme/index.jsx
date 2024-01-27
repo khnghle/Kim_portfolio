@@ -103,7 +103,7 @@ export const theme = createTheme({
 		MuiTypography: {
 			styleOverrides: {
 				root: {
-					margin: "inherit",
+					margin: "0px",
 				},
 			},
 		},
