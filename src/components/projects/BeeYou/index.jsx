@@ -6,12 +6,12 @@ import MyRole from "../common/MyRole";
 import responsiblitliesTableSVG from "../../../assets/projects/BeeYou/responsibilies.svg";
 import designProcessFlowSVG from "../../../assets/projects/BeeYou/designProcess.svg";
 import BeeYouDiscover from "./Discover";
+import BeeYouDesign from "./Design";
 
 const styles = ({ theme }) => ({
 	display: "flex",
 	flexDirection: "column",
 	marginTop: "30px",
-	alignItems: "center",
 });
 
 function BeeYou() {
@@ -72,6 +72,7 @@ function BeeYou() {
 			<ProjectIntro data={introData} />
 			<MyRole data={myRoleData} />
 			<BeeYouDiscover />
+			<BeeYouDesign/>
 		</Box>
 	);
 }

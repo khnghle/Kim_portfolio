@@ -5,8 +5,6 @@ import empathyMapTable from "../../../assets/projects/BeeYou/empathyMap.svg";
 import siteMapTable from "../../../assets/projects/BeeYou/siteMap.svg";
 import userFlowTable from "../../../assets/projects/BeeYou/userFlow.svg";
 
-
-
 const styles = ({ theme }) => ({
 	display: "flex",
 	flexDirection: "column",
@@ -14,7 +12,6 @@ const styles = ({ theme }) => ({
 	marginLeft: "30px",
 	width: "600px",
 	lineHeight: 2,
-
 });
 
 function BeeYouDiscover() {
@@ -44,9 +41,15 @@ function BeeYouDiscover() {
 		"Main Point: Availability ",
 	];
 
-	const siteMap = "I wanted to focus on the user main health goals and leave room for future expansion."
+	const siteMap =
+		"I wanted to focus on the user main health goals and leave room for future expansion.";
 
-	const userFlows = () => <><strong>User Flow: </strong>Launch the app and see if you are able to book an appointment with your therapist. </>
+	const userFlows = () => (
+		<>
+			<strong>User Flow: </strong>Launch the app and see if you are able to book
+			an appointment with your therapist.{" "}
+		</>
+	);
 	return (
 		<Box sx={styles({ theme })}>
 			<Typography variant="h1" className="discover--header mdMarginBtm">
@@ -75,10 +78,7 @@ function BeeYouDiscover() {
 				<Typography className="mdMarginBtm">
 					{competitiveAnalysisText()}
 				</Typography>
-				<img
-					src={competitiveAnalysisChart}
-					className="map--img centerImage"
-				/>
+				<img src={competitiveAnalysisChart} className="map--img centerImage" />
 			</Box>
 
 			<Box className="section--container lgMarginBtm">

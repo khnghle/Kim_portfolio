@@ -10,6 +10,7 @@ const colors = {
 		light: "#C2DBAD94",
 		dark: "#477523",
 		header: "#657362",
+		background: "#8D9D8C"
 	},
 	blue: {
 		main: "#D9F0FF",
@@ -96,6 +97,13 @@ export const theme = createTheme({
 						boxShadow: "0px 4px 10px 0px rgba(0, 0, 0, 0.20)",
 						cursor: "pointer",
 					},
+				},
+			},
+		},
+		MuiTypography: {
+			styleOverrides: {
+				root: {
+					margin: "inherit",
 				},
 			},
 		},
