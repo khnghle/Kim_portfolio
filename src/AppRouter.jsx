@@ -16,6 +16,7 @@ const AppRouter = () => {
 				<Route path="/projects/healthManagement" element={<HealthManagement/>}  />
 				<Route path="/projects/monkeyBuddy" element={<MonkeyBuddy/>}  />
 
+
 		</Routes>
 	);
 };

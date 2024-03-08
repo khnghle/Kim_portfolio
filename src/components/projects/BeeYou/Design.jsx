@@ -2,25 +2,24 @@ import { Box, useTheme, Typography } from "@mui/material";
 import { generateUnorderedNumLists } from "../../utils";
 import lofiDesigns1 from "../../../assets/projects/BeeYou/lofiDesigns1.svg";
 import lofiDesigns2 from "../../../assets/projects/BeeYou/lofiDesigns2.svg";
-import image1 from "../../../assets/projects/BeeYou/carousel/accountTab.svg";
-import image2 from "../../../assets/projects/BeeYou/carousel/quizTab.svg";
-import image3 from "../../../assets/projects/BeeYou/carousel/personalTherapistTab.svg";
-import image4 from "../../../assets/projects/BeeYou/carousel/calendarTab.svg";
-import image5 from "../../../assets/projects/BeeYou/carousel/homePageTab.svg";
-import image6 from "../../../assets/projects/BeeYou/carousel/loginTab.svg";
+import image1 from "../../../assets/projects/BeeYou/carousel1/accountTab.svg";
+import image2 from "../../../assets/projects/BeeYou/carousel1/quizTab.svg";
+import image3 from "../../../assets/projects/BeeYou/carousel1/personalTherapistTab.svg";
+import image4 from "../../../assets/projects/BeeYou/carousel1/calendarTab.svg";
+import image5 from "../../../assets/projects/BeeYou/carousel1/homePageTab.svg";
+import image6 from "../../../assets/projects/BeeYou/carousel1/loginTab.svg";
 import Carousel from "../../common/carousel";
 
 const styles = ({ theme }) => ({
 	display: "flex",
 	flexDirection: "column",
 	marginTop: "60px",
-	marginLeft: "30px",
 	width: "600px",
 	lineHeight: 2,
 	".section--screens-container": {
 		backgroundColor: theme.palette.green.background,
-		width: "100vw",
-		marginLeft: "-30px",
+		// width: "100vw",
+		// marginLeft: "-30px",
 		padding: "20px 0",
 	},
 });

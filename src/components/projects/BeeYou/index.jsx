@@ -7,11 +7,15 @@ import responsiblitliesTableSVG from "../../../assets/projects/BeeYou/responsibi
 import designProcessFlowSVG from "../../../assets/projects/BeeYou/designProcess.svg";
 import BeeYouDiscover from "./Discover";
 import BeeYouDesign from "./Design";
+import BeeYouBrandingIdentity from "./BrandingAndIdentity";
+import BeeYouValidate from "./Validate";
+import Conclusion from '../common/Conclusion'
 
 const styles = ({ theme }) => ({
 	display: "flex",
 	flexDirection: "column",
 	marginTop: "30px",
+	alignItems: 'center'
 });
 
 function BeeYou() {
@@ -73,6 +77,9 @@ function BeeYou() {
 			<MyRole data={myRoleData} />
 			<BeeYouDiscover />
 			<BeeYouDesign/>
+			<BeeYouValidate/>
+			<BeeYouBrandingIdentity/>
+			<Conclusion/>
 		</Box>
 	);
 }

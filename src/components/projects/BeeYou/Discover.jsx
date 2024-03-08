@@ -9,7 +9,7 @@ const styles = ({ theme }) => ({
 	display: "flex",
 	flexDirection: "column",
 	marginTop: "30px",
-	marginLeft: "30px",
+	// marginLeft: "30px",
 	width: "600px",
 	lineHeight: 2,
 });
@@ -52,7 +52,10 @@ function BeeYouDiscover() {
 	);
 	return (
 		<Box sx={styles({ theme })}>
-			<Typography variant="h1" className="discover--header mdMarginBtm">
+			<Typography
+				variant="h1"
+				className="discover--header mdMarginBtm"
+			>
 				Discover
 			</Typography>
 
@@ -61,6 +64,7 @@ function BeeYouDiscover() {
 					variant="h2"
 					color="green.header"
 					className="section--header xsmMarginBtm"
+					style={{ margin: 0 }}
 				>
 					User Audience
 				</Typography>

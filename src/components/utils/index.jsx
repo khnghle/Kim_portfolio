@@ -32,6 +32,12 @@ export const generateCustomText = (list, identifier) => {
 							{generateOrderedNumLists(listItem.text, identifier)}
 						</div>
 					);
+					if (listItem.type === "ul")
+					return (
+						<div key={`${identifier}-ul${idx}`}>
+							{generateUnorderedNumLists(listItem.text, identifier)}
+						</div>
+					);
 			})}
 		</div>
 	);

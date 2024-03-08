@@ -1,4 +1,4 @@
-import {  useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { Box, useTheme } from "@mui/material";
 import leftArrow from "../../assets/leftArrow.svg";
 import rightArrow from "../../assets/rightArrow.svg";
@@ -9,12 +9,12 @@ const styles = ({ theme, position }) => ({
 		display: "flex",
 		flexDirection: "row",
 		gap: "20px",
-		transform: `translateX(${position * -80}%)`,
+		transform: `translateX(${position * -85}%)`,
 		transition: "transform 250ms ease-in-out",
 	},
 
 	".carousel--img": {
-		height: "350px",
+		height: "225px",
 	},
 
 	".isBlur": {
@@ -25,7 +25,7 @@ const styles = ({ theme, position }) => ({
 	},
 	".carousel-image--container": {
 		position: "relative",
-		cursor: 'pointer',
+		cursor: "pointer",
 		":hover>.overlay": {
 			opacity: 1,
 		},
@@ -50,7 +50,7 @@ function Carousel({ images }) {
 
 	const handleRight = () => {
 		setPosition((currPosition) => {
-			if (currPosition + 1 > 1) return currPosition;
+			if (currPosition + 1 > 2) return currPosition;
 			return currPosition + 1;
 		});
 	};
@@ -64,12 +64,16 @@ function Carousel({ images }) {
 
 	useEffect(() => {
 		if (position === 0) {
-			setNext(3);
+			setNext(2);
 			setPrev(null);
 		}
 		if (position === 1) {
+			setNext(4);
+			setPrev(1);
+		}
+    if (position === 2) {
 			setNext(null);
-			setPrev(2);
+			setPrev(3);
 		}
 	}, [position]);
 

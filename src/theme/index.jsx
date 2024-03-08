@@ -10,7 +10,8 @@ const colors = {
 		light: "#C2DBAD94",
 		dark: "#477523",
 		header: "#657362",
-		background: "#8D9D8C"
+		background: "#8D9D8C",
+		link: '#427E52'
 	},
 	blue: {
 		main: "#D9F0FF",
@@ -103,7 +104,7 @@ export const theme = createTheme({
 		MuiTypography: {
 			styleOverrides: {
 				root: {
-					margin: "0px",
+					// margin: "inherit",
 				},
 			},
 		},
