@@ -1,28 +1,40 @@
 import { Box, useTheme, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+import { useLocation } from "react-router-dom";
 
-const styles = ({ theme }) => ({
+
+const styles = ({ theme, location }) => ({
 	backgroundColor: theme.palette.pink.light,
 	display: "flex",
 	justifyContent: "space-between",
+	position: location?.pathname === '/'? 'absolute' : '',
+	bottom: "0",
+	width: "100%",
 	".logo--image": {
-		width: "30px",
+		width: "50px",
 	},
 	".footerLink--container": {
 		display: "flex",
 		gap: "10px",
-		paddingRight: "5px",
+		paddingRight: "15px",
+		alignItems: 'center'
 	},
 });
 
 function Footer() {
 	const theme = useTheme();
+	const location = useLocation()
+
 	const linkData = [
-		{ text: "LinkedIn", route: "https://www.linkedin.com/in/kimberly-de-santiago-8353aa225/", isOutsideApp: true },
+		{
+			text: "LinkedIn",
+			route: "https://www.linkedin.com/in/kimberly-de-santiago-8353aa225/",
+			isOutsideApp: true,
+		},
 	];
 	return (
-		<Box sx={styles({ theme })}>
+		<Box sx={styles({ theme, location })}>
 			<img src={logo} className="logo--image" />
 			<Box className="footerLink--container">
 				{linkData.map((link, idx) => {
@@ -39,7 +51,10 @@ function Footer() {
 						);
 
 					return (
-						<Link key={`footerLink-${idx}`} to={link.route}>
+						<Link
+							key={`footerLink-${idx}`}
+							to={link.route}
+						>
 							<Typography variant="link2">{link.text}</Typography>
 						</Link>
 					);

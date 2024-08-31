@@ -15,6 +15,7 @@ const colors = {
 	},
 	blue: {
 		main: "#D9F0FF",
+		header: '#0F3FAB'
 	},
 	orange: {
 		main: "#FBCEC2",
@@ -134,12 +135,12 @@ theme.typography.body1 = {
 };
 
 theme.typography.link1 = {
-	fontSize: "12px",
+	fontSize: "20px",
 	fontStyle: "normal",
 	fontWeight: "normal",
 };
 
 theme.typography.link2 = {
-	fontSize: "8px",
+	fontSize: "18px",
 	textDecoration: "underline",
 };

@@ -6,15 +6,14 @@ const styles = ({ theme, location }) => ({
 	backgroundColor: location === "/" ? theme.palette.pink.light : "",
 	display: "flex",
 	".logo--image": {
-		width: "60px",
+		width: "80px",
 	},
 	".navLink--container": {
 		display: "flex",
-		// gap: "10px",
 		alignItems: "center",
 	},
 	".navLink--item": {
-		padding: "0px 10px",
+		padding: "0px 15px",
 		fontWeight: "bold",
 		"&:hover": {
 			backgroundColor: theme.palette.green.light,

@@ -34,9 +34,6 @@ const styles = ({ project }) => ({
 
 function ProjectsNavBar({ title }) {
 	const theme = useTheme();
-	const navigate = useNavigate();
-
-	console.log({ local: title });
 
 	return (
 		<Box sx={styles({ theme, project: title })}>

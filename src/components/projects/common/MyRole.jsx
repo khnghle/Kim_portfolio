@@ -12,7 +12,7 @@ const styles = ({ theme, tableType }) => ({
   },
   '.designProcessFlow--img': {
     width: '100%',
-    marginTop: '20px'
+    marginTop: '20px',
   }
 });
 

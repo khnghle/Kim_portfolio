@@ -12,6 +12,12 @@ const styles = ({ theme }) => ({
 	// marginLeft: "30px",
 	width: "600px",
 	lineHeight: 2,
+
+	'.empathy-map':{
+		width: '600px',
+		
+		
+	}
 });
 
 function BeeYouDiscover() {
@@ -98,7 +104,7 @@ function BeeYouDiscover() {
 					{empathyMapText[1]}
 				</Typography>
 
-				<img src={empathyMapTable} className="map--img centerImage" />
+				<img src={empathyMapTable} className="empathy-map centerImage" />
 			</Box>
 
 			<Box className="section--container lgMarginBtm">

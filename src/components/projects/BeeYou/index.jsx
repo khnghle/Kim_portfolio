@@ -1,4 +1,5 @@
 import { Box, useTheme, Typography } from "@mui/material";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProjectIntro from "../common/Intro";
 import BeeYouAppSvg from "../../../assets/projects/BeeYou/app.svg";
@@ -9,13 +10,13 @@ import BeeYouDiscover from "./Discover";
 import BeeYouDesign from "./Design";
 import BeeYouBrandingIdentity from "./BrandingAndIdentity";
 import BeeYouValidate from "./Validate";
-import Conclusion from '../common/Conclusion'
+import Conclusion from "../common/Conclusion";
 
 const styles = ({ theme }) => ({
 	display: "flex",
 	flexDirection: "column",
 	marginTop: "30px",
-	alignItems: 'center'
+	alignItems: "center",
 });
 
 function BeeYou() {
@@ -71,15 +72,34 @@ function BeeYou() {
 		designProcessFlow: designProcessFlowSVG,
 	};
 
+	const conclusionText = `Throughout this project I discovered that many people had different
+	perspectives when it comes to mental health. When it came to
+	organizing therapy appointments, trying to educate myself on the
+	topic, or journaling it felt like I had so many things on my plate.
+	However many users agreed that having it all in one place made
+	managing easier and more enjoyable. I wanted to figure out a way were
+	users to feel safe and have easy access to therapy and other
+	resources. Based on my research, users feel like they are able to do
+	more for their mental health. They have more than just therapy, they
+	can educate themselves and have a writing outlet.`;
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<Box sx={styles({ theme })}>
 			<ProjectIntro data={introData} />
 			<MyRole data={myRoleData} />
 			<BeeYouDiscover />
-			<BeeYouDesign/>
-			<BeeYouValidate/>
-			<BeeYouBrandingIdentity/>
-			<Conclusion/>
+			<BeeYouDesign />
+			<BeeYouValidate />
+			<BeeYouBrandingIdentity />
+			<Conclusion
+				text={conclusionText}
+				prevCTA={"/"}
+				nextCTA={"/projects/healthManagement"}
+			/>
 		</Box>
 	);
 }
